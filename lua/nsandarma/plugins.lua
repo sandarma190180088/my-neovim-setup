@@ -16,7 +16,7 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-   { "ellisonleao/gruvbox.nvim"},
+  { "ellisonleao/gruvbox.nvim"},
   { "navarasu/onedark.nvim"},
   {"projekt0n/github-nvim-theme", lazy = false, priority = 1000  },
   {
@@ -58,6 +58,7 @@ lazy.setup({
 
   "nvim-treesitter/nvim-treesitter",
   "windwp/nvim-ts-autotag",
+  {"akinsho/toggleterm.nvim"},
 
   { "windwp/nvim-autopairs", config = true, event = "InsertEnter" },
   {
