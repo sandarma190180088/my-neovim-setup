@@ -7,8 +7,9 @@ lsp.ensure_installed({
   'html',
   'cssls',
   'tsserver',
+  'pyright',
   -- 'intelephense',
-  'sumneko_lua'
+  --'sumneko_lua'
 })
 
 lsp.on_attach(function(client, bufnr)

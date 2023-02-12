@@ -21,6 +21,7 @@ lazy.setup({
   {"projekt0n/github-nvim-theme", lazy = false, priority = 1000  },
   {
     "VonHeikemen/lsp-zero.nvim",
+    branch = 'v1.x', 
     dependencies = {
       "neovim/nvim-lspconfig",
       "williamboman/mason.nvim",
