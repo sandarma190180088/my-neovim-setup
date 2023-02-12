@@ -5,12 +5,12 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
-    [[ _____                 _                             ]],
-    [[/  ___|               | |                            ]],
-    [[\ `--.  __ _ _ __   __| | __ _ _ __ _ __ ___   __ _  ]],
-    [[ `--. \/ _` | '_ \ / _` |/ _` | '__| '_ ` _ \ / _` | ]],
-    [[/\__/ / (_| | | | | (_| | (_| | |  | | | | | | (_| | ]],
-    [[\____/ \__,_|_| |_|\__,_|\__,_|_|  |_| |_| |_|\__,_| ]],
+    [[ _____                 _                            ]],
+    [[/  ___|               | |                           ]],
+    [[\ `--.  __ _ _ __   __| | __ _ _ __ _ __ ___   __ _ ]],
+    [[ `--. \/ _` | '_ \ / _` |/ _` | '__| '_ ` _ \ / _` |]],
+    [[/\__/ / (_| | | | | (_| | (_| | |  | | | | | | (_| |]],
+    [[\____/ \__,_|_| |_|\__,_|\__,_|_|  |_| |_| |_|\__,_|]],
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -28,7 +28,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "2030 crazy rich"
+	return "i can, therefore i am"
 end
 
 dashboard.section.footer.val = footer()
