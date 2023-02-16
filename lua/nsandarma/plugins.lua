@@ -43,6 +43,13 @@ lazy.setup({
     branch = "main", 
     event = "BufRead",
   },
+  --wrap 
+    {
+        "andrewferrier/wrapping.nvim",
+        config = function()
+            require("wrapping").setup()
+        end
+    },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
