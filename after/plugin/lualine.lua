@@ -33,7 +33,7 @@ local mode = {
 
 local filetype = {
   "filetype",
-  icons_enabled = false,
+  icons_enabled = true,
   icon = nil,
 }
 
@@ -43,29 +43,62 @@ local branch = {
   icon = "",
 }
 
+local icons = {
+    linux = '',
+    macos = '',
+    windows = ' ',
+}
+
+local function file_osinfo()
+    local os = vim.bo.fileformat:upper()
+    local icon
+    if os == 'UNIX' then
+        icon = icons.linux
+    elseif os == 'MAC' then
+        icon = icons.macos
+    else
+        icon = icons.windows
+    end
+    return icon
+end
+
 local location = {
   "location",
   padding = 0,
 }
+local colors = {
+  blue   = '#458588',
+  cyan   = '#79dac8',
+  black  = '#080808',
+  white  = '#c6c6c6',
+  red    = '#CC241D',
+  violet = '#d183e8',
+  grey   = '#303030',
+  green  = '#B8BB26',
+  orange = "#d65d0e"
+}
+local bubbles_theme = {
+  normal = {
+    a = { fg = colors.black, bg = colors.violet },
+    b = { fg = colors.white, bg = colors.grey },
+    c = { fg = colors.white, bg = colors.grey },
+  },
 
--- cool function for progress
-local progress = function()
-  local current_line = vim.fn.line(".")
-  local total_lines = vim.fn.line("$")
-  local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
-  local line_ratio = current_line / total_lines
-  local index = math.ceil(line_ratio * #chars)
-  return chars[index]
-end
+  insert = { a = { fg = colors.black, bg = colors.cyan } },
+  visual = { a = { fg = colors.black, bg = colors.orange } },
+  replace = { a = { fg = colors.black, bg = colors.red } },
 
-local spaces = function()
-  return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-end
+  inactive = {
+    a = { fg = colors.white, bg = colors.black },
+    b = { fg = colors.white, bg = colors.black },
+    c = { fg = colors.white, bg = colors.grey },
+  },
+}
 
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = "auto",
+    theme = bubbles_theme,
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
@@ -76,8 +109,8 @@ lualine.setup({
     lualine_b = { mode },
     lualine_c = {},
     -- lualine_x = { "encoding", "fileformat", "filetype" },
-    lualine_x = { diff, spaces, "encoding", filetype },
-    lualine_y = { location },
+    lualine_x = { diff, file_osinfo, "encoding", filetype },
+    lualine_y = { "location" },
     lualine_z = { },
   },
   inactive_sections = {

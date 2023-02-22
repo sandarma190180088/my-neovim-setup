@@ -18,6 +18,8 @@ if not ok then return end
 lazy.setup({
   { "ellisonleao/gruvbox.nvim"},
   { "navarasu/onedark.nvim"},
+  -- gruvbox material
+  'sainnhe/gruvbox-material', 
   --code runner
   {"CRAG666/code_runner.nvim"},
   {"projekt0n/github-nvim-theme", lazy = false, priority = 1000  },
