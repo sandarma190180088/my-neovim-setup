@@ -92,11 +92,8 @@ lazy.setup({
   { "lewis6991/gitsigns.nvim", config = true, event = "BufEnter" },
   { "iamcco/markdown-preview.nvim", ft = "markdown" },
 
-  {
-    "karb94/neoscroll.nvim",
-    event = "BufEnter",
-    enabled = false
-  },
+
+  'karb94/neoscroll.nvim',
 
   "goolord/alpha-nvim",
   "David-Kunz/markid",
