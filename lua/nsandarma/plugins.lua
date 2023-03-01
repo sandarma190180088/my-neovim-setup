@@ -40,6 +40,8 @@ lazy.setup({
       "rafamadriz/friendly-snippets",
       "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/nvim-cmp",
+      "jose-elias-alvarez/null-ls.nvim",
+      "MunifTanjim/prettier.nvim"
     }
   },
   {
@@ -102,5 +104,5 @@ lazy.setup({
     "kylechui/nvim-surround",
     config = true
   },
-{'iamcco/markdown-preview.nvim'}
+  {'iamcco/markdown-preview.nvim'},
 })
