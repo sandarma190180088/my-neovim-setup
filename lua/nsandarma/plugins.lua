@@ -21,6 +21,7 @@ lazy.setup({
   -- gruvbox-baby
   'luisiacc/gruvbox-baby',
   --code runner
+  --NOTE: Sandy
   {"CRAG666/code_runner.nvim"},
   {"projekt0n/github-nvim-theme", lazy = false, priority = 1000  },
   {
@@ -66,6 +67,11 @@ lazy.setup({
   "akinsho/bufferline.nvim",
   "nvim-lua/plenary.nvim",
   "MunifTanjim/nui.nvim",
+  { 
+    "folke/todo-comments.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+
+  },
 
   "kyazdani42/nvim-tree.lua",
   { "lukas-reineke/indent-blankline.nvim", event = "BufEnter" },
