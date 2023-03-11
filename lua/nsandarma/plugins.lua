@@ -67,6 +67,7 @@ lazy.setup({
   "akinsho/bufferline.nvim",
   "nvim-lua/plenary.nvim",
   "MunifTanjim/nui.nvim",
+  'kazhala/close-buffers.nvim',
   { 
     "folke/todo-comments.nvim",
     dependencies = "nvim-lua/plenary.nvim",
