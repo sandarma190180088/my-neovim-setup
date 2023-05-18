@@ -21,12 +21,12 @@ lazy.setup({
   -- gruvbox-baby
   'luisiacc/gruvbox-baby',
   --code runner
-  --NOTE: Sandy
+  -- NOTE: Sandy
   {"CRAG666/code_runner.nvim"},
   {"projekt0n/github-nvim-theme", lazy = false, priority = 1000  },
   {
     "VonHeikemen/lsp-zero.nvim",
-    branch = 'v1.x', 
+    branch = 'v1.x',
     dependencies = {
       "neovim/nvim-lspconfig",
       "williamboman/mason.nvim",
@@ -45,18 +45,20 @@ lazy.setup({
       "MunifTanjim/prettier.nvim"
     }
   },
+  -- live server
+  "manzeloth/live-server",
   {
     "glepnir/lspsaga.nvim", 
     branch = "main", 
     event = "BufRead",
   },
   --wrap 
-    {
-        "andrewferrier/wrapping.nvim",
-        config = function()
-            require("wrapping").setup()
-        end
-    },
+  {
+      "andrewferrier/wrapping.nvim",
+      config = function()
+          require("wrapping").setup()
+      end
+  }, 
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
