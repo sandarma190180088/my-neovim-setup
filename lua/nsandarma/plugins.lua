@@ -76,10 +76,12 @@ lazy.setup({
 
   },
 
-  "kyazdani42/nvim-tree.lua",
+  -- "kyazdani42/nvim-tree.lua",
+  {'nvim-tree/nvim-tree.lua',commit= '9c97e6449b0b0269bd44e1fd4857184dfa57bb4c'},
+  
   { "lukas-reineke/indent-blankline.nvim", event = "BufEnter" },
 
-  "nvim-treesitter/nvim-treesitter",
+  {"nvim-treesitter/nvim-treesitter"},
   "windwp/nvim-ts-autotag",
   {"akinsho/toggleterm.nvim"},
 
